@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
-    const username = document.querySelector(".name").value;
-    const password = document.querySelector(".password").value;
+    const username = document.querySelector(".user-name").value;
+    const password = document.querySelector(".user-password").value;
 
     if (!username || !password) {
       showError("input cannot be empty");
@@ -111,16 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#logoutButton").style.display = "block"; // Show logout button
 
     document.querySelector(
-      ".usernameTitle"
+      "#usernameTitle"
     ).textContent = `${user.attrs.firstName} ${user.attrs.lastName}`;
     document.querySelector(
-      ".userEmail"
+      "#userEmail"
     ).innerHTML = `<span class='Span'>E-mail: </span>${user.attrs.email}`;
     document.querySelector(
-      ".userPhoneNumber"
+      "#userPhoneNumber"
     ).innerHTML = `<span class='Span'>Telephone: </span>${user.attrs.tel}`;
     document.querySelector(
-      ".userCampus"
+      "#userCampus"
     ).innerHTML = `<span class='Span'>Campus: </span>${user.campus}`;
   }
 
