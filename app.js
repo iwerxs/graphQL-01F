@@ -266,8 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalXP = xpData.reduce((sum, xp) => sum + xp.amount, 0);
     console.log("Total XP:", totalXP);
     const formattedXP = (totalXP / 1000).toFixed(1);
-    document.querySelector(".XPH1").textContent = `XP: ${formattedXP} KB`;
-    // displayLineChart(".graphXpAmount", xpData, "amount", "steelblue", "Cumulative XP Over Time");
+    document.querySelector("#xpHeader").textContent = `XP: ${formattedXP} KB`;
   }
 
   function createBarChart(
