@@ -21,7 +21,7 @@ body {
 }
 
 .loginFormDiv, .profileDiv {
-  border: 2px solid #2393cd;
+  /* border: 2px solid #2393cd; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,9 +74,9 @@ body {
 }
 
 .errorMsg {
-  color: red;
+  color: orangered;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   display: none;
 }
 
@@ -134,10 +134,10 @@ img {
   width: 100%;
   max-width: 800px;
   margin-bottom: 20px;
-  background-color: #000;
+  background-color: #fafafa;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 0 15px 5px goldenrod;
+  box-shadow: 0 0 10px 3px #2393cd;
 }
 
 .graphXpAmount, .graphRatioAmount, .graphSkillAmount {
@@ -167,8 +167,8 @@ img {
 }
 
 #logoutButton{
-  background-color: rgb(55, 146, 47);
-  color: white;
+  background-color: #f1abc9da;
+  color: #003561;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -177,10 +177,10 @@ img {
   margin: auto;
   transition: all 0.4s ease-out;
   font-weight: bold;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 #logoutButton:hover, #logoutButton:focus {
-  box-shadow: 0 0 20px 5px goldenrod;
+  box-shadow: 0 0 10px 3px #2393cd;
 }

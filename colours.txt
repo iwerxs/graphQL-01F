@@ -7,3 +7,5 @@ blue #2393cd
 dark-blue #003561
 
 gradient between pink & blue
+
+background #fafafa

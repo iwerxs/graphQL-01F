@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: { Authorization: `Basic ${base64}` },
     });
 
-    if (!response.ok) throw new Error("Invalid username or password");
+    if (!response.ok) throw new Error("Invalid credentials");
 
     const tokenData = await response.json();
     if (tokenData.error) throw new Error(tokenData.error);
