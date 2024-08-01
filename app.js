@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Audit Ratio: " + formattedRatio;
     // create horizontal bar chart
     const chartData = [
-      { type: "Done", amount: Math.ceil(sums.up / 1000) },
+      { type: "Completed", amount: Math.ceil(sums.up / 1000) },
       { type: "Received", amount: Math.ceil(sums.down / 1000) },
     ];
 
@@ -571,7 +571,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("text-anchor", "end")
       .style("font-size", "14px")
       .style("fill", "green")
-      .text("Done");
+      .text("Completed");
 
     lineSvg
       .append("text")
