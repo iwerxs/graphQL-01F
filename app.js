@@ -379,9 +379,9 @@ document.addEventListener("DOMContentLoaded", function () {
     createBarChart(
       ".graphSkillAmount",
       data,
-      "Skill GO",
+      "Golang Skills",
       "Amount",
-      "Project",
+      "Projects",
       "#2393cd"
     );
   }
