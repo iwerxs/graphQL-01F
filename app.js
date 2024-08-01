@@ -536,7 +536,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .append("path")
       .datum(cumulativeData.up)
       .attr("fill", "none")
-      .attr("stroke", "blue")
+      .attr("stroke", "#003561")
       .attr("stroke-width", 1.5)
       .attr("d", lineUp);
 
@@ -549,6 +549,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("d", lineDown);
 
     // abbreviated month name
+    const monthFormat = d3.timeFormat("%b");
+    lineSvg
+      .append("g")
+      .attr("transform", `translate(0,${lineChartHeight})`)
+      .call(d3.axisBottom(xLine).tickFormat(monthFormat));
 
     lineSvg.append("g").call(d3.axisLeft(yLine));
 
