@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = d3.select(containerSelector);
     container.html("");
 
-    const margin = { top: 20, right: 50, bottom: 40, left: 50 };
+    const margin = { top: 40, right: 50, bottom: 40, left: 50 };
     const width = 800 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { type: "Received", amount: Math.ceil(sums.down / 1000) },
     ];
 
-    const margin = { top: 40, right: 80, bottom: 40, left: 70 };
+    const margin = { top: 20, right: 80, bottom: 40, left: 70 };
     const width = 700 - margin.left - margin.right;
     const height = 100 - margin.top - margin.bottom;
 
