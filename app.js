@@ -1,6 +1,6 @@
-// js and graphql functionality
+// js graphql functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const errorMsg = document.querySelector("#errMsg");
+  const errorMsg = document.querySelector(".errorMsg");
   const endpoint = "https://learn.01founders.co/api/auth/signin";
   const graphQLEndpoint =
     "https://learn.01founders.co/api/graphql-engine/v1/graphql";
@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const xpQuery = `user { xps { amount, path} }`;
   const auditRatioQuery = `user { audits(order_by: {createdAt: asc}, where: {grade: {_is_null: false}}) { grade, createdAt } }`;
   const londonDiv01ProjectsQuery = `
-        user { 
-            transactions(where: {path: {_like: "/london/div-01/%"}}, order_by: {createdAt: asc}) { 
-                createdAt, amount, type, path 
-            } 
-        }
-    `;
+      user { 
+          transactions(where: {path: {_like: "/london/div-01/%"}}, order_by: {createdAt: asc}) { 
+              createdAt, amount, type, path 
+          } 
+      }
+  `;
 
   document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
-    const username = document.querySelector("#userName").value;
-    const password = document.querySelector("#userPassword").value;
+    const username = document.querySelector(".name").value;
+    const password = document.querySelector(".password").value;
 
     if (!username || !password) {
-      showError("input fields cannot be empty.");
+      showError("Username and password cannot be empty.");
       return;
     }
 
@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector("#logoutButton")
     .addEventListener("click", function () {
       localStorage.removeItem("token");
-      document.querySelector("#containerLoginForm").style.display = "flex";
-      document.querySelector(".container-profile").style.display = "none";
+      document.querySelector(".loginFormDiv").style.display = "flex";
+      document.querySelector(".profileDiv").style.display = "none";
       document.querySelector("#logoutButton").style.display = "none";
     });
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: { Authorization: `Basic ${base64}` },
     });
 
-    if (!response.ok) throw new Error("Invalid credentials");
+    if (!response.ok) throw new Error("Invalid username or password");
 
     const tokenData = await response.json();
     if (tokenData.error) throw new Error(tokenData.error);
@@ -106,10 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayProfileData(data) {
     const user = data.user[0];
-    document.querySelector("#containerLoginForm").style.display = "none";
-    document.querySelector("#containerProfile").style.display = "flex";
-    document.querySelector("#logoutButton").style.display = "block";
-    // Show logout button
+    document.querySelector(".loginFormDiv").style.display = "none";
+    document.querySelector(".profileDiv").style.display = "flex";
+    document.querySelector("#logoutButton").style.display = "block"; // Show logout button
 
     document.querySelector(
       ".usernameTitle"
