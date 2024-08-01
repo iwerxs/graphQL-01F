@@ -151,7 +151,7 @@ img {
 .XPSection, .RatioSection, .SkillSection, .transactionSection, .progressSection, .resultsSection {
   width: 100%;
   max-width: 900px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background-color: #fafafa;
   border-radius: 15px;
   padding: 20px;

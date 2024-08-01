@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("x", 0)
       .attr("width", (d) => x(d.amount))
       .attr("fill", (d) =>
-        d.type === "Received" ? "#2393cd" : "rgb(147, 241, 241)"
+        d.type === "Received" ? "#f1abc9" : "rgb(147, 241, 241)"
       );
 
     svg
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", (d) => y(d.type) + y.bandwidth() / 2)
       .attr("dy", ".35em")
       .text((d) => d.amount + " KB")
-      .attr("fill", "#003561");
+      .attr("fill", "#f1abc9");
 
     // Create line chart for cumulative up and down values
     const lineChartMargin = { top: 20, right: 30, bottom: 50, left: 60 };
