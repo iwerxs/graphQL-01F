@@ -425,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { type: "Received", amount: Math.ceil(sums.down / 1000) },
     ];
 
-    const margin = { top: 20, right: 100, bottom: 40, left: 50 };
+    const margin = { top: 20, right: 100, bottom: 40, left: 70 };
     const width = 700 - margin.left - margin.right;
     const height = 100 - margin.top - margin.bottom;
 
@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .append("path")
       .datum(cumulativeData.down)
       .attr("fill", "none")
-      .attr("stroke", "red")
+      .attr("stroke", "#fa4493")
       .attr("stroke-width", 1.5)
       .attr("d", lineDown);
 
