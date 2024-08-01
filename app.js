@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
-    const username = document.querySelector(".user-name").value;
-    const password = document.querySelector(".user-password").value;
+    const username = document.querySelector("#userName").value;
+    const password = document.querySelector("#userPassword").value;
 
     if (!username || !password) {
       showError("input fields cannot be empty.");
@@ -107,8 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayProfileData(data) {
     const user = data.user[0];
     document.querySelector("#containerLoginForm").style.display = "none";
-    document.querySelector(".container-profile").style.display = "flex";
-    document.querySelector("#logoutButton").style.display = "block"; // Show logout button
+    document.querySelector("#containerProfile").style.display = "flex";
+    document.querySelector("#logoutButton").style.display = "block";
+    // Show logout button
 
     document.querySelector(
       ".usernameTitle"

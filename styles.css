@@ -50,8 +50,17 @@ body {
     text-align: center;
 }
 
-.user-name, .user-password {
+#userName {
     width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    color: #003561;
+}
+#userPassword {
+  width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -83,7 +92,7 @@ body {
     display: none;
 }
 
-.container-profile {
+#containerProfile {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -165,7 +174,7 @@ img {
 #containerLoginForm {
     display: flex;
 }
-.container-profile {
+#containerProfile {
     display: none;
 }
 
