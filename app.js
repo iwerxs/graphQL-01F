@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       projects.filter((d) => d.type === "xp"),
       "amount",
       "#003561",
-      "XP Evolution"
+      "XP Points over Time"
     );
   }
 
@@ -565,7 +565,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .style("font-size", "16px")
       .style("color", "green")
       .style("text-decoration", "underline")
-      .text("Cumulative Audit Ratios Over Time (KB)");
+      .text("Audit Ratios Over Time (KB)");
 
     // legend for line graph
     lineSvg
