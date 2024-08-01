@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("x", 0)
       .attr("width", (d) => x(d.amount))
       .attr("fill", (d) =>
-        d.type === "Received" ? "#f1abc9" : "rgb(147, 241, 241)"
+        d.type === "Received" ? "#f1abc9" : "rgb(0, 0, 255)"
       );
 
     svg

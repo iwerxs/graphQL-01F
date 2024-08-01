@@ -95,6 +95,7 @@ input[type=text]:focus, input[type=password]:focus {
   margin-top: 20px;
   font-size: 16px;
   display: none;
+  /* border: 2px solid blue */
 }
 
 .profileDiv {
