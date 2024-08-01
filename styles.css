@@ -121,11 +121,8 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 img {
-  /* border-radius: 50%; */
   height: 150px;
   width: 150px;
-  /* border: 2px solid rgb(250, 201, 78);
-  box-shadow: 0 0 15px 5px goldenrod; */
 }
 
 .userInformationDiv {
@@ -159,9 +156,13 @@ img {
   box-shadow: 0 0 10px 3px #2393cd;
 }
 
-.graphXpAmount, .graphRatioAmount, .graphSkillAmount {
+.audit-line-chart {
   width: 100%;
   height: 500px;
+}
+.graphXpAmount, .graphSkillAmount {
+  width: 100%;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
@@ -204,5 +205,5 @@ img {
   background-color: #f1abc9;
   font-size: 18px;
   font-weight: bold;
-  box-shadow: 0 0 10px 3px #2393cd;
+  border: 1px solid #2393cd;
 }
