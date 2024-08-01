@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("x", 0)
       .attr("width", (d) => x(d.amount))
       .attr("fill", (d) =>
-        d.type === "Received" ? "#f1abc9" : "rgb(0, 0, 255)"
+        d.type === "Received" ? "#fa4493" : "rgb(0, 53, 97)"
       );
 
     svg
@@ -548,10 +548,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("stroke-width", 1.5)
       .attr("d", lineDown);
 
+    // abbreviated month name
+    const monthFormat = d3.timeFormat("%b");
+
     lineSvg
       .append("g")
       .attr("transform", `translate(0,${lineChartHeight})`)
-      .call(d3.axisBottom(xLine));
+      .call(d3.axisBottom(xLine).tickFormat(monthFormat));
 
     lineSvg.append("g").call(d3.axisLeft(yLine));
 
