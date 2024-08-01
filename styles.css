@@ -39,7 +39,7 @@ body {
   min-height: 100vh;
 }
 
-.loginForm {
+.login-form {
   background: #fafafa;
   padding: 40px;
   border-radius: 10px;
@@ -69,7 +69,7 @@ input[type=text]:focus, input[type=password]:focus {
   border: 2px solid #f1abc9;
 }
 
-.name, .password {
+.user-name, .user-password {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -145,7 +145,11 @@ img {
   margin: 0;
 }
 
-.userEmail, .userPhoneNumber, .userCampus {
+#userEmail {
+  font-size: 20px;
+  margin: 5px 0;
+}
+.userPhoneNumber, .userCampus {
   font-size: 20px;
   margin: 5px 0;
 }
@@ -174,7 +178,7 @@ img {
 }
 
 @media (max-width: 768px) {
-  .loginForm {
+  .login-form {
       width: 90%;
   }
 

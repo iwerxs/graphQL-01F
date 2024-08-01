@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("cy", (d) => y(d.cumulativeXP))
       .attr("fill", color)
       .on("mouseover", function (event, d) {
-        d3.select(this).attr("fill", "red");
+        d3.select(this).attr("fill", "#fa4493");
         tooltip.transition().duration(200).style("opacity", 0.9);
         tooltip
           .html(
