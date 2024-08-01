@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return { x: new Date(d.createdAt), y: d.amount, projectName };
     });
     createBarChart(
-      ".graphSkillAmount",
+      "#graphSkillAmount",
       data,
       "Golang Skills",
       "Amount",
