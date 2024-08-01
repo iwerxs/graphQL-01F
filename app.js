@@ -561,6 +561,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", 0 - lineChartMargin.top / 2)
       .attr("text-anchor", "middle")
       .style("font-size", "16px")
+      .style("color", "green")
       .style("text-decoration", "underline")
       .text("Cumulative Audit Ratios Over Time (KB)");
 
