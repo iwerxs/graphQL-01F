@@ -20,7 +20,7 @@ body {
     overflow-y: auto;
 }
 
-.login-form-container {
+#containerLoginForm {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ body {
     font-weight: bold;
 }
 
-.err-msg {
+#errMsg {
     color: orangered;
     margin-top: 20px;
     font-size: 16px;
@@ -162,7 +162,7 @@ img {
     }
 }
 
-.login-form-container {
+#containerLoginForm {
     display: flex;
 }
 .container-profile {

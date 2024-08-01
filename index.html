@@ -9,7 +9,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
-    <div class="login-form-container">
+    <div id="containerLoginForm">
       <form class="loginForm" method="post">
         <h1 class="heading-form">01F-GraphQL Project</h1>
         <input class="user-name" type="text" placeholder="username" required />
@@ -19,7 +19,7 @@
           placeholder="password"
           required />
         <input class="btn-submit" type="submit" value="Login" />
-        <p class="err-msg">Please Enter Username and Password</p>
+        <p id="errMsg">Please Enter Username and Password</p>
       </form>
     </div>
 

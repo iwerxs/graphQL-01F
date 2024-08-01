@@ -1,6 +1,6 @@
 // js and graphql functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const errorMsg = document.querySelector(".err-msg");
+  const errorMsg = document.querySelector("#errMsg");
   const endpoint = "https://learn.01founders.co/api/auth/signin";
   const graphQLEndpoint =
     "https://learn.01founders.co/api/graphql-engine/v1/graphql";
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector("#logoutButton")
     .addEventListener("click", function () {
       localStorage.removeItem("token");
-      document.querySelector(".login-form-container").style.display = "flex";
+      document.querySelector("#containerLoginForm").style.display = "flex";
       document.querySelector(".container-profile").style.display = "none";
       document.querySelector("#logoutButton").style.display = "none";
     });
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayProfileData(data) {
     const user = data.user[0];
-    document.querySelector("login-form-container").style.display = "none";
+    document.querySelector("#containerLoginForm").style.display = "none";
     document.querySelector(".container-profile").style.display = "flex";
     document.querySelector("#logoutButton").style.display = "block"; // Show logout button
 
