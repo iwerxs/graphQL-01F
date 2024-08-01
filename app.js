@@ -480,9 +480,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("fill", "#f1abc9");
 
     // Create line chart for cumulative up and down values
-    const lineChartMargin = { top: 20, right: 30, bottom: 50, left: 60 };
+    const lineChartMargin = { top: 40, right: 30, bottom: 50, left: 60 };
     const lineChartWidth = 800 - lineChartMargin.left - lineChartMargin.right;
-    const lineChartHeight = 400 - lineChartMargin.top - lineChartMargin.bottom;
+    const lineChartHeight = 500 - lineChartMargin.top - lineChartMargin.bottom;
 
     const lineSvg = d3
       .select(".audit-line-chart")
@@ -549,12 +549,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("d", lineDown);
 
     // abbreviated month name
-    const monthFormat = d3.timeFormat("%b");
-
-    lineSvg
-      .append("g")
-      .attr("transform", `translate(0,${lineChartHeight})`)
-      .call(d3.axisBottom(xLine).tickFormat(monthFormat));
 
     lineSvg.append("g").call(d3.axisLeft(yLine));
 
