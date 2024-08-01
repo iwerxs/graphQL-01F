@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       localStorage.removeItem("token");
       document.querySelector("#loginFormContainer").style.display = "flex";
-      document.querySelector(".profileDiv").style.display = "none";
+      document.querySelector("#userProfile").style.display = "none";
       document.querySelector("#logoutButton").style.display = "none";
     });
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayProfileData(data) {
     const user = data.user[0];
     document.querySelector("#loginFormContainer").style.display = "none";
-    document.querySelector(".profileDiv").style.display = "flex";
+    document.querySelector("#userProfile").style.display = "flex";
     document.querySelector("#logoutButton").style.display = "block"; // Show logout button
 
     document.querySelector(
