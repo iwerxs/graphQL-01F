@@ -177,11 +177,14 @@ img {
   width: 20%;
   margin: auto;
   transition: all 0.4s ease-out;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: 2px;
 }
 
 #logoutButton:hover, #logoutButton:focus {
+  background-color: #f1abc9;
+  font-size: 18px;
+  font-weight: bold;
   box-shadow: 0 0 10px 3px #2393cd;
 }
