@@ -535,7 +535,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .append("path")
       .datum(cumulativeData.up)
       .attr("fill", "none")
-      .attr("stroke", "green")
+      .attr("stroke", "blue")
       .attr("stroke-width", 1.5)
       .attr("d", lineUp);
 
