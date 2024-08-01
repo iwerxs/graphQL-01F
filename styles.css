@@ -95,18 +95,19 @@ body {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #fafafa;
+  color: #003561;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 0 15px 5px goldenrod;
+  box-shadow: 0 0 10px 3px #2393cd;
 }
 
 img {
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  border: 2px solid rgb(250, 201, 78);
-  box-shadow: 0 0 15px 5px goldenrod;
+  /* border-radius: 50%; */
+  height: 150px;
+  width: 150px;
+  /* border: 2px solid rgb(250, 201, 78);
+  box-shadow: 0 0 15px 5px goldenrod; */
 }
 
 .userInformationDiv {
