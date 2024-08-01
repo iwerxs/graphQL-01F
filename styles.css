@@ -87,7 +87,8 @@ input[type=text]:focus, input[type=password]:focus {
 .btnSub:hover, .btnSub:focus {
   background-color: #f1abc9;
   font-weight: bold;
-  box-shadow: 0 0 10px 3px #2393cd;
+  border-color: #2393cd;
+  /* box-shadow: 0 0 10px 3px #2393cd; */
 }
 
 .errorMsg {

@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(containerSelector);
     container.innerHTML = "";
     // increased bottom margin for labels
-    const margin = { top: 20, right: 30, bottom: 100, left: 40 };
+    const margin = { top: 40, right: 30, bottom: 100, left: 40 };
     const width = 800 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { type: "Received", amount: Math.ceil(sums.down / 1000) },
     ];
 
-    const margin = { top: 20, right: 80, bottom: 40, left: 70 };
+    const margin = { top: 40, right: 80, bottom: 40, left: 70 };
     const width = 700 - margin.left - margin.right;
     const height = 100 - margin.top - margin.bottom;
 
@@ -570,7 +570,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // legend for line graph
     lineSvg
       .append("text")
-      .attr("x", lineChartWidth - 100)
+      .attr("x", lineChartWidth - 50)
       .attr("y", -10)
       .attr("text-anchor", "end")
       .style("font-size", "14px")
@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lineSvg
       .append("text")
-      .attr("x", lineChartWidth - 100)
+      .attr("x", lineChartWidth - 50)
       .attr("y", 10)
       .attr("text-anchor", "end")
       .style("font-size", "14px")
