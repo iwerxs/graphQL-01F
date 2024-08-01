@@ -259,9 +259,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function displayXP(xpData) {
-    console.log("XP Data:", xpData); // Debug statement
+    // log values
+    console.log("XP Data:", xpData);
     const totalXP = xpData.reduce((sum, xp) => sum + xp.amount, 0);
-    console.log("Total XP:", totalXP); // Debug statement
+    console.log("Total XP:", totalXP);
     const formattedXP = (totalXP / 1000).toFixed(1);
     document.querySelector(".XPH1").textContent = `XP: ${formattedXP} KB`;
     // displayLineChart(".graphXpAmount", xpData, "amount", "steelblue", "Cumulative XP Over Time");
