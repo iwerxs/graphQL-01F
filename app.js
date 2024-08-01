@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.querySelector(".password").value;
 
     if (!username || !password) {
-      showError("Username and password cannot be empty.");
+      showError("input cannot be empty");
       return;
     }
 
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     svg
       .append("g")
       .attr("transform", `translate(0,${height})`)
-      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m-%d")).ticks(6));
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%y-%m-%d")).ticks(6));
 
     svg.append("g").call(d3.axisLeft(y));
 
@@ -277,8 +277,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ) {
     const container = document.querySelector(containerSelector);
     container.innerHTML = "";
-
-    const margin = { top: 20, right: 30, bottom: 100, left: 40 }; // Increased bottom margin for labels
+    // increased bottom margin for labels
+    const margin = { top: 20, right: 30, bottom: 100, left: 40 };
     const width = 800 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     svg.append("g").call(d3.axisLeft(y).ticks(5));
 
-    // Create bars
+    // create bars
     svg
       .selectAll(".bar")
       .data(data)
@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("height", (d) => height - y(d.y))
       .attr("fill", color);
 
-    // Add text labels on top of bars
+    // text labels on top of bars
     svg
       .selectAll(".bar-label")
       .data(data)
@@ -332,13 +332,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .append("text")
       .attr("class", "bar-label")
       .attr("x", (d) => x(d.projectName) + x.bandwidth() / 2)
-      .attr("y", (d) => y(d.y) - 5) // Positioning text slightly above the top of the bar
+      .attr("y", (d) => y(d.y) - 5)
+      // Positioning text slightly above the top of the bar
       .attr("text-anchor", "middle")
       .text((d) => d.y)
       .style("font-size", "12px")
-      .style("fill", "gold"); // Changed color to gold
+      .style("fill", "#003561");
 
-    // Add chart title
+    // chart title
     svg
       .append("text")
       .attr("x", width / 2)
@@ -348,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .style("text-decoration", "underline")
       .text(title);
 
-    // Add X axis label
+    // x axis label
     svg
       .append("text")
       .attr(
@@ -358,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .style("text-anchor", "middle")
       .text(xAxisLabel);
 
-    // Add Y axis label
+    // y axis label
     svg
       .append("text")
       .attr("transform", "rotate(-90)")
@@ -380,16 +381,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "Skill GO",
       "Amount",
       "Project",
-      "green"
+      "#2393cd"
     );
   }
 
   function AuditRatio(data) {
-    // Initialize sums for each type and an array to hold the cumulative data
+    // initialize sums for each type and an array to hold the cumulative data
     const sums = { down: 0, up: 0 };
     const cumulativeData = { down: [], up: [] };
 
-    // Aggregate sums and prepare cumulative data
+    // total sums and prepare cumulative data
     data.forEach((project) => {
       if (project.type === "down") {
         sums.down += project.amount;
@@ -406,19 +407,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Calculate ratios
+    // calc ratios
     const ratio = sums.down === 0 ? 0 : sums.up / sums.down;
     const formattedRatio = ratio.toFixed(1);
 
-    // Log the sums and ratio to the console
+    // log sums and ratio to console
     console.log('Sum of amounts for type "down":', sums.down);
     console.log('Sum of amounts for type "up":', sums.up);
     console.log("Ratio:", formattedRatio);
 
-    // Display the formatted ratio in the HTML
+    // display ratio in the HTML
     document.querySelector(".RatioH1").textContent =
       "Audit Ratio: " + formattedRatio;
-    // Create horizontal bar chart
+    // create horizontal bar chart
     const chartData = [
       { type: "Done", amount: Math.ceil(sums.up / 1000) },
       { type: "Received", amount: Math.ceil(sums.down / 1000) },
@@ -430,7 +431,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const svg = d3
       .select(".audit-ratio-chart")
-      .html("") // Clear previous chart content
+      // clear previous graph
+      .html("")
       .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -483,7 +485,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const lineSvg = d3
       .select(".audit-line-chart")
-      .html("") // Clear previous chart content
+      // clear previous graph
+      .html("")
       .append("svg")
       .attr(
         "width",
@@ -560,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .style("text-decoration", "underline")
       .text("Cumulative Audit Ratios Over Time (KB)");
 
-    // Add legend for the line chart
+    // legend for line graph
     lineSvg
       .append("text")
       .attr("x", lineChartWidth - 100)
