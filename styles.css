@@ -93,7 +93,7 @@ body {
 
 .userIdentificationSection {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -135,7 +135,7 @@ img {
 
 .XPSection, .RatioSection, .SkillSection, .transactionSection, .progressSection, .resultsSection {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin-bottom: 20px;
   background-color: #fafafa;
   border-radius: 15px;

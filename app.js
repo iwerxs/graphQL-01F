@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ".graphXpAmount",
       projects.filter((d) => d.type === "xp"),
       "amount",
-      "green",
+      "#003561",
       "XP Evolution"
     );
   }
@@ -463,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("x", 0)
       .attr("width", (d) => x(d.amount))
       .attr("fill", (d) =>
-        d.type === "Received" ? "whitesmoke" : "rgb(147, 241, 147)"
+        d.type === "Received" ? "#2393cd" : "rgb(147, 241, 241)"
       );
 
     svg
@@ -476,7 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", (d) => y(d.type) + y.bandwidth() / 2)
       .attr("dy", ".35em")
       .text((d) => d.amount + " KB")
-      .attr("fill", "gold");
+      .attr("fill", "#003561");
 
     // Create line chart for cumulative up and down values
     const lineChartMargin = { top: 20, right: 30, bottom: 50, left: 60 };
@@ -570,7 +570,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", -10)
       .attr("text-anchor", "end")
       .style("font-size", "14px")
-      .style("fill", "green")
+      .style("fill", "#003561")
       .text("Completed");
 
     lineSvg
@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", 10)
       .attr("text-anchor", "end")
       .style("font-size", "14px")
-      .style("fill", "red")
+      .style("fill", "#fa4493")
       .text("Received");
   }
 
