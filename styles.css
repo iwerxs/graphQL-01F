@@ -1,198 +1,186 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    max-height: 100%;
+  max-height: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
-    color: #003561;
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #003561;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-#containerLoginForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.container-profile {
+.loginFormDiv, .profileDiv {
+  border: 2px solid #2393cd;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .loginForm {
-    background: #fafafa;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px 5px #2393cd;
-    max-width: 100%;
-    width: 600px;
+  background: #fafafa;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px #2393cd;
+  max-width: 100%;
+  width: 600px;
 }
 
-.heading-form {
-    margin: 0 0 20px;
-    font-size: 24px;
-    text-align: center;
+.formTitle {
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
-#userName {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fafafa;
-    color: #003561;
-}
-#userPassword {
+.name, .password {
   width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fafafa;
-    color: #003561;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #003561;
 }
 
-.btn-submit {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f1abc9da;
-    color: #003561;
-    cursor: pointer;
-    transition: all 0.4s ease-out;
+.btnSub {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1abc9da;
+  color: #003561;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  font-weight: 400;
+  
 }
 
-.btn-submit:hover, .btn-submit:focus {
+.btnSub:hover, .btnSub:focus {
   background-color: #f1abc9;
-    font-weight: bold;
+  font-weight: bold;
+  box-shadow: 0 0 10px 3px #2393cd;
 }
 
-#errMsg {
-    color: orangered;
-    margin-top: 20px;
-    font-size: 16px;
-    display: none;
+.errorMsg {
+  color: red;
+  margin-top: 20px;
+  font-size: 18px;
+  display: none;
 }
 
-#containerProfile {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 100vw;
+.profileDiv {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .userIdentificationSection {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #000;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 15px 5px goldenrod;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px 5px goldenrod;
 }
 
 img {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    border: 2px solid rgb(250, 201, 78);
-    box-shadow: 0 0 15px 5px goldenrod;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 2px solid rgb(250, 201, 78);
+  box-shadow: 0 0 15px 5px goldenrod;
 }
 
 .userInformationDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .usernameTitle {
-    font-size: 35px;
-    font-weight: bold;
-    margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .userEmail, .userPhoneNumber, .userCampus {
-    font-size: 20px;
-    margin: 5px 0;
+  font-size: 20px;
+  margin: 5px 0;
 }
 
 .Span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .XPSection, .RatioSection, .SkillSection, .transactionSection, .progressSection, .resultsSection {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    background-color: #000;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 15px 5px goldenrod;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  background-color: #000;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px 5px goldenrod;
 }
 
 .graphXpAmount, .graphRatioAmount, .graphSkillAmount {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
-    .loginForm {
-        width: 90%;
-    }
+  .loginForm {
+      width: 90%;
+  }
 
-    .usernameTitle {
-        font-size: 28px;
-    }
+  .usernameTitle {
+      font-size: 28px;
+  }
 
-    .userEmail, .userPhoneNumber, .userCampus {
-        font-size: 18px;
-    }
+  .userEmail, .userPhoneNumber, .userCampus {
+      font-size: 18px;
+  }
 }
 
-#containerLoginForm {
-    display: flex;
+.loginFormDiv {
+  display: flex;
 }
-#containerProfile {
-    display: none;
+.profileDiv {
+  display: none;
 }
 
 #logoutButton{
-    background-color: rgb(55, 146, 47);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    width: 20%;
-    margin: auto;
-    transition: all 0.4s ease-out;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 3px;
+  background-color: rgb(55, 146, 47);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 20%;
+  margin: auto;
+  transition: all 0.4s ease-out;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 3px;
 }
 
 #logoutButton:hover, #logoutButton:focus {
-    box-shadow: 0 0 20px 5px goldenrod;
+  box-shadow: 0 0 20px 5px goldenrod;
 }
