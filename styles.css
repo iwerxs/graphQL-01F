@@ -162,7 +162,7 @@ img {
   font-weight: bold;
 }
 
-.xp-container, .RatioSection, .skills-container, .transactionSection, .progressSection, .resultsSection {
+.xp-container, .ratio-container, .skills-container, .transactionSection, .progressSection, .resultsSection {
   width: 100%;
   max-width: 900px;
   margin-bottom: 40px;

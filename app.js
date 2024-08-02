@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Ratio:", formattedRatio);
 
     // display ratio in the HTML
-    document.querySelector(".RatioH1").textContent =
+    document.querySelector("#ratioHeading").textContent =
       "Audit Ratio: " + formattedRatio;
     // create horizontal bar chart
     const chartData = [
