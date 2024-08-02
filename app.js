@@ -478,7 +478,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .attr("y", (d) => y(d.type) + y.bandwidth() / 2)
       .attr("dy", ".35em")
       .text((d) => d.amount + " KB")
-      .attr("fill", "#f1abc9");
+      .attr("fill", "#ccc");
 
     // Create line chart for cumulative up and down values
     const lineChartMargin = { top: 40, right: 30, bottom: 50, left: 60 };
