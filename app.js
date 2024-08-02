@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#logoutButton").style.display = "block"; // Show logout button
 
     document.querySelector(
-      "#usernameTitle"
+      "#userName"
     ).textContent = `${user.attrs.firstName} ${user.attrs.lastName}`;
     document.querySelector(
       "#userEmail"
