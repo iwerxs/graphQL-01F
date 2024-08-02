@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("London Div-01 Project Data with Project Names:", projects);
 
     displayLineChart(
-      ".graphXpAmount",
+      "#graphXpAmount",
       projects.filter((d) => d.type === "xp"),
       "amount",
       "#003561",
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
     title,
     yAxisLabel,
     xAxisLabel,
-    color = "steelblue"
+    color = "#003561"
   ) {
     const container = document.querySelector(containerSelector);
     container.innerHTML = "";
