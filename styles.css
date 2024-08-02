@@ -172,7 +172,7 @@ img {
   box-shadow: 0 0 10px 3px #2393cd;
 }
 
-.audit-line-chart {
+#auditLineGraph {
   width: 100%;
   height: 500px;
 }

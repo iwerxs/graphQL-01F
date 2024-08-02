@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const height = 100 - margin.top - margin.bottom;
 
     const svg = d3
-      .select(".audit-ratio-chart")
+      .select("#auditRatioGraph")
       // clear previous graph
       .html("")
       .append("svg")
@@ -486,7 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lineChartHeight = 500 - lineChartMargin.top - lineChartMargin.bottom;
 
     const lineSvg = d3
-      .select(".audit-line-chart")
+      .select("#auditLineGraph")
       // clear previous graph
       .html("")
       .append("svg")
